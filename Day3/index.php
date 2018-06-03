@@ -11,12 +11,12 @@
         array(
           "title" => "XXXX",
           "detail" => "XXXXXXXXXX",
-          "image" => "https://cdn.user.blog.st-hatena.com/default_entry_og_image/115188569/1514306768373622",
+          "image" => "./img/img1.jpeg",
         ),
         array(
           "title" => "YYYY",
           "detail" => "YYYYYYYYYY",
-          "image" => "https://cdn-ak.f.st-hatena.com/images/fotolife/k/ketancho_jp/20180603/20180603112507.jpg",
+          "image" => "./img/img2.jpeg",
         )
       );
     ?>
