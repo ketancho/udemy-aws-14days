@@ -7,18 +7,19 @@
   </head>
   <body>
     <?php
-      $posts = array(
-        array(
-          "title" => "XXXX",
-          "detail" => "XXXXXXXXXX",
-          "image" => "./img/img1.jpeg",
-        ),
-        array(
-          "title" => "YYYY",
-          "detail" => "YYYYYYYYYY",
-          "image" => "./img/img2.jpeg",
-        )
-      );
+      try {
+        # xxx.xxx.xxx.xxx はプライベート IP アドレス
+        $dbh = new PDO('mysql:host=xxx.xxx.xxx.xxx;dbname=simple_blog', "root", "root");
+
+        $sth = $dbh->prepare("SELECT * from posts");
+        $sth->execute();
+        $posts = $sth->fetchAll();
+
+        $dbh = null;
+      } catch (PDOException $e) {
+        print "エラー!: " . $e->getMessage() . "<br/>";
+        die();
+      }
     ?>
 
     <h2 class="text-center mt-3 mb-5">Simple Blog</h2>
