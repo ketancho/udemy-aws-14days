@@ -5,7 +5,7 @@ use Aws\S3\S3Client;
 
 # TODO: バケット名を各自入力してください
 const BUCKET_NAME = '***';
-const FILE_NAME = 'hoge.csv';
+const FILE_NAME = 'data.csv';
 
 $s3 = new S3Client([
     'profile' => 'default',
