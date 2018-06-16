@@ -3,7 +3,8 @@ require '../vendor/autoload.php';
 
 use Aws\S3\S3Client;
 
-const BUCKET_NAME = 'udemy-aws-14days-stg-s3-sample';
+# TODO: バケット名を各自入力してください
+const BUCKET_NAME = '***';
 const FILE_NAME = 'hoge.csv';
 
 $s3 = new S3Client([
