@@ -4,6 +4,8 @@ require '../vendor/autoload.php';
 use Aws\Sqs\SqsClient;
 use Aws\Exception\AwsException;
 
+date_default_timezone_set('Asia/Tokyo');
+
 $client = new SqsClient([
     'region' => 'ap-northeast-1',
     'version' => '2012-11-05'
