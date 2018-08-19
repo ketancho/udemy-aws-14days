@@ -1,0 +1,11 @@
+version: 0.1
+
+phases:
+  build:
+    commands:
+      - aws deploy push --region ap-northeast-1 --application-name [application-name] --s3-location s3://[S3-bucket-name]/sample.zip --source src
+artifacts:
+  files:
+    - '**/*'
+  base-directory: src
+  name: sample.zip
