@@ -8,8 +8,7 @@
   <body>
     <?php
       try {
-        # xxx.xxx.xxx.xxx はプライベート IP アドレス
-        $dbh = new PDO('mysql:host=xxx.xxx.xxx.xxx;dbname=simple_blog', "root", "root");
+        $dbh = new PDO('mysql:host=10.0.101.20;dbname=simple_blog', "simple_blog_user", "User!1234");
 
         $sth = $dbh->prepare("SELECT * from posts");
         $sth->execute();
