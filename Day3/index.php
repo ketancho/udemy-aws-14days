@@ -9,14 +9,24 @@
     <?php
       $posts = array(
         array(
-          "title" => "XXXX",
-          "detail" => "XXXXXXXXXX",
-          "image" => "./img/img1.jpeg",
+          "title" => "JAWS Days 初参加（2014）",
+          "detail" => "学びが多かった。何より熱量に驚いた。自分も発信する側になりたい。",
+          "image" => "./img/img1.png",
         ),
         array(
-          "title" => "YYYY",
-          "detail" => "YYYYYYYYYY",
-          "image" => "./img/img2.jpeg",
+          "title" => "re:Invent 初参加（2016）",
+          "detail" => "規模の大きさに驚いた。個人的には Step Functions の発表が1番よかった。",
+          "image" => "./img/img2.png",
+        ),
+        array(
+          "title" => "AWS 設計 に関する本を執筆しました（2018）",
+          "detail" => "多くの方に読んでいただけたら嬉しいです。",
+          "image" => "./img/img3.png",
+        ),
+        array(
+          "title" => "AWS SAA 資格対策の本を執筆しました（2019）",
+          "detail" => "オリジナル問題を通して対策していただけます。",
+          "image" => "./img/img4.png",
         )
       );
     ?>
