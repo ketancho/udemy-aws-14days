@@ -4,7 +4,7 @@ import mysql.connector
 conn = mysql.connector.connect(
     user='simple_blog_user',
     password='User!1234',
-    host='udemy-aws-14days-mysql.cz0ey60y4t95.ap-northeast-1.rds.amazonaws.com',
+    host='(*RDSエンドポイント)',
     database='simple_blog',
     allow_local_infile=True
 )
