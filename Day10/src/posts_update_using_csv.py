@@ -14,7 +14,7 @@ cursor = conn.cursor()
 trancate_data_query = "TRUNCATE posts;"
 cursor.execute(trancate_data_query)
 
-load_data_query = "LOAD DATA LOCAL INFILE './data.csv' INTO TABLE posts fields terminated by ',';"
+load_data_query = "LOAD DATA LOCAL INFILE './post.csv' INTO TABLE posts fields terminated by ',';"
 cursor.execute(load_data_query)
 
 conn.commit()
