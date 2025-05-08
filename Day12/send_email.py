@@ -14,12 +14,12 @@ ses_client.send_email(
         'Body': {
             'Text': {
                 'Charset': 'UTF-8',
-                'Data': 'This is the message body in text format.',
+                'Data': 'AWS 14 Days の検証用のメールです',
             },
         },
         'Subject': {
             'Charset': 'UTF-8',
-            'Data': 'Test email',
+            'Data': 'Test email: udemy-aws-14days',
         },
     },
     Source=from_email_address
