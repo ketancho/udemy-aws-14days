@@ -7,7 +7,7 @@ response = sqs_client.receive_message(
     WaitTimeSeconds=5
 )
 if 'Messages' not in response:
-    print('no message in queue.')
+    print('no messages in queue.')
 else:
     message = response['Messages'][0]
     message_id = message['MessageId']
