@@ -5,4 +5,4 @@ response = sqs_client.receive_message(
     QueueUrl='https://sqs.ap-northeast-1.amazonaws.com/761654548343/udemy-aws-14days-queue-2',
     WaitTimeSeconds=5
 )
-print(response['Messages'])
+print(response)
