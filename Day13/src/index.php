@@ -2,14 +2,14 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
-    <title>Hello World</title>
+    <title>Simple Blog</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   </head>
   <body>
     <?php
       try {
-        # xxx.xxx.xxx.xxx はプライベート IP アドレス
-        $dbh = new PDO('mysql:host=xxx.xxx.xxx.xxx;dbname=simple_blog', "root", "rootroot");
+        # TODO: 各自の RDS エンドポイントに変更する
+        $dbh = new PDO('mysql:host=[*RDS エンドポイントに置き換える*];dbname=simple_blog', "root", "rootroot");
 
         $sth = $dbh->prepare("SELECT * from posts");
         $sth->execute();
@@ -22,7 +22,7 @@
       }
     ?>
 
-    <h2 class="text-center mt-3 mb-5">[CodeXXX]Simple Blog</h2>
+    <h2 class="text-center mt-3 mb-5">Simple Blog</h2>
     <div class="container">
 
       <?php foreach ($posts as $post) : ?>
