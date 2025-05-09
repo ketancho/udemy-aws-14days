@@ -9,7 +9,7 @@
     <?php
       try {
         # TODO: 各自の RDS エンドポイントに変更する
-        $dbh = new PDO('mysql:host=[*RDS エンドポイントに置き換える*];dbname=simple_blog', "root", "rootroot");
+        $dbh = new PDO('mysql:host=[*RDS エンドポイントに置き換える*];dbname=simple_blog', "simple_blog_user", "User!1234");
 
         $sth = $dbh->prepare("SELECT * from posts");
         $sth->execute();
