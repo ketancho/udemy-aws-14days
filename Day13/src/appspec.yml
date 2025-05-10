@@ -3,8 +3,6 @@ os: linux
 files:
   - source: index.php
     destination: /var/www/html/
-  - source: img
-    destination: /var/www/html/img/
 hooks:
   BeforeInstall:
     - location: script/clean.sh
