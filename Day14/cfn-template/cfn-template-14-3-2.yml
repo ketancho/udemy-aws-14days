@@ -1,0 +1,51 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: udemy-aws-14days-cfn-template
+
+Resources:
+  cfnVPC: 
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 192.168.0.0/16
+      Tags:
+        - Key: Name
+          Value: cfn-udemy-aws-14days-vpc      
+  cfnSubnet: 
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref cfnVPC
+      CidrBlock: 192.168.1.0/24
+      AvailabilityZone: ap-northeast-1a
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: cfn-udemy-aws-14days-public-subnet-1a  
+  cfnInternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+      - Key: Name
+        Value: cfn-udemy-aws-14days-public-igw
+  cfnAttachGateway:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId: !Ref cfnVpc
+      InternetGatewayId: !Ref cfnInternetGateway
+  cfnRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      Tags:
+        - Key: Name
+          Value: cfn-udemy-aws-14days-public-rt
+      VpcId: !Ref cfnVpc
+  cfnRoute:
+    Type: AWS::EC2::Route
+    DependsOn: cfnInternetGateway
+    Properties:
+      RouteTableId: !Ref cfnRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref cfnInternetGateway
+  cfnSubnetRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref cfnSubnet
+      RouteTableId: !Ref cfnRouteTable
