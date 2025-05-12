@@ -48,3 +48,32 @@ Resources:
     Properties:
       SubnetId: !Ref cfnSubnet
       RouteTableId: !Ref cfnRouteTable
+  cfnEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0c2da9ee6644f16e5
+      InstanceType: t2.micro
+      SubnetId: !Ref cfnSubnet
+      BlockDeviceMappings:
+        - DeviceName: /dev/xvda
+          Ebs:
+            VolumeType: gp3
+            VolumeSize: 8
+      Tags:
+        - Key: Name
+          Value: cfn-ec2-instance
+      SecurityGroupIds:
+        - !Ref cfnSecurityGroup
+  cfnSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: cfnSecurityGroup
+      VpcId: !Ref cfnVPC
+      Tags:
+        - Key: Name
+          Value: cfn-ssh-sg
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: '22'
+        ToPort: '22'
+        CidrIp: 0.0.0.0/0
