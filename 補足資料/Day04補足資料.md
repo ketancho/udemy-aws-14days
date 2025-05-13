@@ -18,7 +18,7 @@ timedatectl set-timezone Asia/Tokyo
 # Day4-3 コマンドリスト
 ```
 ## .pem ファイルを Web EC2 インスタンスに送る
-scp -i udemy-aws-14days.pem udemy-aws-14days.pem ec2-user@(Web-1aインスタンスのIPアドレス):/home/ec2-user
+scp -i udemy-aws-14days.pem udemy-aws-14days.pem ec2-user@(Web-1aインスタンスの Public IP アドレス):/home/ec2-user
 
 ## Web EC2 インスタンスに SSH
 ssh -i udemy-aws-14days.pem ec2-user@10.0.101.20
@@ -83,5 +83,5 @@ sudo cat /var/www/html/index.php
 # Day4-6 コマンドリスト
 ```
 ## DB → インターネットは疎通できないことの確認（Web → インターネットは○）
-curl http://(Web EC2 インスタンス の Public IP)/
+curl http://(Web EC2 インスタンス の Public IP アドレス)/
 ```

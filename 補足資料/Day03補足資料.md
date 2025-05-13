@@ -3,14 +3,14 @@ Day3 のハンズオンのコピー＆ペースト用コマンドリストです
 
 # Day3-5 コマンドリスト
 ```
-ssh -i udemy-aws-14days.pem ec2-user@(Web-1aインスタンスのIPアドレス)
+ssh -i udemy-aws-14days.pem ec2-user@(Web-1aインスタンスの Public IP アドレス)
 
 ## ホスト名の変更
 sudo hostnamectl set-hostname udemy-aws-14days-web-1a
 
 ## 一度 EC2 から exit し、再度 SSH することでホスト名が変更されていることを確認
 exit
-ssh -i udemy-aws-14days.pem ec2-user@(Web-1aインスタンスのIPアドレス)
+ssh -i udemy-aws-14days.pem ec2-user@(Web-1aインスタンスの Public IP アドレス)
 
 ## ロケールの変更
 localectl status
