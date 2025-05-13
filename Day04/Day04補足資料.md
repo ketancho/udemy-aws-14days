@@ -28,12 +28,13 @@ timedatectl
 
 sudo dnf update -y
 ## ==> インターネットに出ていけない.. レスポンス返ってこないので Ctr+C
-
+```
 # Day4-4 コマンドリスト
+```
 sudo dnf update -y
-
+```
 # Day4-5 コマンドリスト
-
+```
 ## DB 用の EC2 インスタンスでの作業
 sudo dnf -y install https://dev.mysql.com/get/mysql84-community-release-el9-1.noarch.rpm
 sudo dnf -y install mysql mysql-community-server #mysql-community-client #client はなくてよさそう
