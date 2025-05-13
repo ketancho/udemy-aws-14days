@@ -2,6 +2,7 @@ Day3 のハンズオンのコピー＆ペースト用コマンドリストです
 任意での実行のものも含めています。動画にあわせてご活用ください。
 
 # Day3-5 コマンドリスト
+```
 ssh -i udemy-aws-14days.pem ec2-user@(Web-1aインスタンスのIPアドレス)
 
 ## ホスト名の変更
@@ -29,8 +30,9 @@ sudo dnf update -y
 sudo dnf install -y httpd
 sudo systemctl enable httpd
 sudo systemctl start httpd
-
+```
 # Day3-6 コマンドリスト
+```
 sudo dnf install -y php8.4
 
 sudo vim /etc/httpd/conf/httpd.conf
@@ -51,3 +53,4 @@ sudo dnf install -y git
 git clone https://github.com/ketancho/udemy-aws-14days.git
 
 sudo cp -r udemy-aws-14days/Day03/* /var/www/html/
+```
