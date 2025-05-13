@@ -50,4 +50,4 @@ sudo systemctl reload httpd
 sudo dnf install -y git
 git clone https://github.com/ketancho/udemy-aws-14days.git
 
-sudo cp -r udemy-aws-14days/Day3/* /var/www/html/
+sudo cp -r udemy-aws-14days/Day03/* /var/www/html/
