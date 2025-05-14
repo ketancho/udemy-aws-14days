@@ -37,7 +37,7 @@ sudo dnf update -y
 ```
 ## DB 用の EC2 インスタンスでの作業
 sudo dnf -y install https://dev.mysql.com/get/mysql84-community-release-el9-1.noarch.rpm
-sudo dnf -y install mysql mysql-community-server #mysql-community-client #client はなくてよさそう
+sudo dnf -y install mysql mysql-community-server
 
 sudo systemctl start mysqld
 sudo systemctl enable mysqld
