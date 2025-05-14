@@ -71,9 +71,6 @@ exit
 sudo dnf -y install https://dev.mysql.com/get/mysql84-community-release-el9-1.noarch.rpm
 sudo dnf -y install mysql php-mysqlnd
 mysql -h 10.0.101.20 -u simple_blog_user -p
-
-use simple_blog;
-insert into posts values (3, "ZZZ", "ZZZZZ", "./img/img1.jpeg");
 exit
 
 sudo cp udemy-aws-14days/Day04/index.php /var/www/html/
