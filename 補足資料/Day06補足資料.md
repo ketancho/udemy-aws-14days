@@ -25,5 +25,5 @@ sudo systemctl start httpd
 # Day6-6
 ```
 yes > /dev/null &
-top
+top # top コマンドは q を押すと停止できます
 ```
