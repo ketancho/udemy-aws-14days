@@ -43,7 +43,7 @@ sudo systemctl start mysqld
 sudo systemctl enable mysqld
 
 ## root の初期パスワードを取得する
-sudo grep 'temporary password' /var/log/mysqld.log
+sudo more /var/log/mysqld.log | grep 'temporary password'
 
 mysql -u root -p
 
