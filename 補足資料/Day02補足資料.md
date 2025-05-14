@@ -11,6 +11,8 @@ chmod 400 udemy-aws-14days.pem
 
 ssh -i udemy-aws-14days.pem ec2-user@x.x.x.x
 
+sudo dnf update -y
+
 dnf list --installed | grep httpd
 sudo dnf install httpd
 dnf list --installed | grep httpd
