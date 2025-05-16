@@ -55,10 +55,10 @@ mysql -u root -p
 create database simple_blog;
 use simple_blog;
 create table posts (id int not null primary key, title varchar(100), detail varchar(1000), image varchar(1000));
-insert into posts values (1, "[RDS] JAWS Days 初参加（2014）", "学びが多かった。何より熱量に驚いた。自分も発信する側になりたい。", "./img/img1.png");
-insert into posts values (2, "[RDS] re:Invent 初参加（2016）", "規模の大きさに驚いた。個人的には Step Functions の発表が1番よかった。", "./img/img2.png");
-insert into posts values (3, "[RDS] AWS 設計 に関する本を執筆しました（2018）", "多くの方に読んでいただけたら嬉しいです。", "./img/img3.png");
-insert into posts values (4, "[RDS] AWS SAA 資格対策の本を執筆しました（2019）", "オリジナル問題を通して対策していただけます。", "./img/img4.png");
+insert into posts values (1, "[DB] JAWS Days 初参加（2014）", "学びが多かった。何より熱量に驚いた。自分も発信する側になりたい。", "./img/img1.png");
+insert into posts values (2, "[DB] re:Invent 初参加（2016）", "規模の大きさに驚いた。個人的には Step Functions の発表が1番よかった。", "./img/img2.png");
+insert into posts values (3, "[DB] AWS 設計 に関する本を執筆しました（2018）", "多くの方に読んでいただけたら嬉しいです。", "./img/img3.png");
+insert into posts values (4, "[DB] AWS SAA 資格対策の本を執筆しました（2019）", "オリジナル問題を通して対策していただけます。", "./img/img4.png");
 
 CREATE USER 'simple_blog_user' IDENTIFIED BY 'User!1234'; #パスワードは各自変更し、覚えておいてください
 GRANT ALL PRIVILEGES ON simple_blog.* TO 'simple_blog_user'@'%' WITH GRANT OPTION;

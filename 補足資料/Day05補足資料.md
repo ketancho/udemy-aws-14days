@@ -13,14 +13,16 @@ exit;
 
 ## simple_blog_user で再接続
 mysql -h (RDS エンドポイント) -u simple_blog_user -p
+
 create database simple_blog;
 use simple_blog;
 create table posts (id int not null primary key, title varchar(100), detail varchar(1000), image varchar(1000));
 
 ## 全て末尾に RDS をつけて、データの向き先が変わっていることを確認できるようにしています
-insert into posts values (1, "XXXX-RDS", "XXXXXXXXXX", "./img/img1.jpeg");
-insert into posts values (2, "YYYY-RDS", "YYYYYYYYYY", "./img/img2.jpeg");
-insert into posts values (3, "ZZZZ-RDS", "ZZZZZZZZZZ", "./img/img1.jpeg");
+insert into posts values (1, "[RDS] JAWS Days 初参加（2014）", "学びが多かった。何より熱量に驚いた。自分も発信する側になりたい。", "./img/img1.png");
+insert into posts values (2, "[RDS] re:Invent 初参加（2016）", "規模の大きさに驚いた。個人的には Step Functions の発表が1番よかった。", "./img/img2.png");
+insert into posts values (3, "[RDS] AWS 設計 に関する本を執筆しました（2018）", "多くの方に読んでいただけたら嬉しいです。", "./img/img3.png");
+insert into posts values (4, "[RDS] AWS SAA 資格対策の本を執筆しました（2019）", "オリジナル問題を通して対策していただけます。", "./img/img4.png");
 
 exit;
 
