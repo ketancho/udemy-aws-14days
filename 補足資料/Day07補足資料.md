@@ -1,6 +1,26 @@
 Day7 のハンズオンのコピー＆ペースト用コマンドリストです。
 任意での実行のものも含めています。動画にあわせてご活用ください。
 
+# Day7-2
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::(作成した S3 Bucket 名に修正する)/*"
+            ]
+        }
+    ]
+}
+```
+
 # Day7-3
 ```
 mysql -h (RDS エンドポイント) -u simple_blog_user -p
