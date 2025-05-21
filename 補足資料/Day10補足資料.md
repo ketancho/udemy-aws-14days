@@ -60,5 +60,5 @@ python3 posts_update_using_csv.py
 ## （参考）以下、用意してあるコードの DL 手順
 git clone https://github.com/ketancho/udemy-aws-14days.git
 cp udemy-aws-14days/Day10/src/get_posts_file_from_s3.py .
-cp udemy-aws-14days/Day10/src/posts_update_using_csv.py .
+cp udemy-aws-14days/Day10/src/update_posts_using_csv.py .
 ```
