@@ -32,6 +32,8 @@ sudo dnf -y install mysql
 ```
 
 ```
+ssh -i udemy-aws-14days.pem ec2-user@(Batch-1cインスタンスの Public IP アドレス)
+
 python3 -V
 
 curl -O https://bootstrap.pypa.io/get-pip.py
