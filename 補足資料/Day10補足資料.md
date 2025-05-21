@@ -48,6 +48,7 @@ python3 get_posts_from_s3.py
 ## -> 権限が無いと言われる
 
 aws configure
+## -> Access Key, Secret Access Key, ap-northeast-1, json
 
 ## 再度 ファイル DL
 python3 get_posts_from_s3.py
