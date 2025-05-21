@@ -45,6 +45,8 @@ pip install mysql-connector-python
 # Day10-4
 ※ソースコードは Day10 フォルダ以下に格納しています
 ```
+vim get_posts_from_s3.py
+
 ## ファイル DL
 python3 get_posts_from_s3.py
 ## -> 権限が無いと言われる
