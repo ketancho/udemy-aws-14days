@@ -1,11 +1,32 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: udemy-aws-14days-cfn-template
 
+Parameters:
+  InstanceType:
+    Type: String
+    Default: t2.micro
+    AllowedValues:
+      - t2.micro
+      - t2.small
+      - t2.medium
+    Description: Select EC2 instance type.
+  KeyPair:
+    Type: AWS::EC2::KeyPair::KeyName
+    Description: Select KeyPair Name.
+
+Mappings:
+  RegionMap:
+    us-east-1:
+      x86: ami-0f88e80871fd81e91
+    ap-northeast-1:
+      x86: ami-0c2da9ee6644f16e5
+
 Resources:
   cfnVPC: 
     Type: AWS::EC2::VPC
     Properties:
       CidrBlock: 192.168.0.0/16
+      EnableDnsSupport: true
       Tags:
         - Key: Name
           Value: cfn-udemy-aws-14days-vpc      
@@ -51,8 +72,8 @@ Resources:
   cfnEC2Instance:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-0c2da9ee6644f16e5
-      InstanceType: t2.micro
+      ImageId: !FindInMap [ RegionMap, !Ref AWS::Region, x86 ]
+      InstanceType: !Ref InstanceType
       SubnetId: !Ref cfnSubnet
       BlockDeviceMappings:
         - DeviceName: /dev/xvda
@@ -64,6 +85,7 @@ Resources:
           Value: cfn-ec2-instance
       SecurityGroupIds:
         - !Ref cfnSecurityGroup
+      KeyName: !Ref KeyPair
   cfnSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -74,6 +96,6 @@ Resources:
           Value: cfn-ssh-sg
       SecurityGroupIngress:
       - IpProtocol: tcp
-        FromPort: '22'
-        ToPort: '22'
+        FromPort: 22
+        ToPort: 22
         CidrIp: 0.0.0.0/0

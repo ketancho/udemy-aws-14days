@@ -6,6 +6,7 @@ Resources:
     Type: AWS::EC2::VPC
     Properties:
       CidrBlock: 192.168.0.0/16
+      EnableDnsSupport: true
       Tags:
         - Key: Name
           Value: cfn-udemy-aws-14days-vpc      
