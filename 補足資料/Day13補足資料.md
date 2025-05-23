@@ -53,6 +53,6 @@ sudo ./install auto
 vim src/index.php 
 # タイトルを Simple Blog - Code Series など修正
 git add -A
-git commit -m "update for code xxx."
+git commit -m "update for code series."
 git push origin main
 ```
