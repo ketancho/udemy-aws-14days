@@ -11,7 +11,7 @@ CREATE USER 'simple_blog_user' IDENTIFIED BY 'User!1234';
 GRANT ALL PRIVILEGES ON simple_blog.* TO 'simple_blog_user'@'%' WITH GRANT OPTION;
 exit;
 
-## simple_blog_user で再接続
+## simple_blog_user で再接続（↑と同じ形でユーザーを作っているならパスワードは User!1234 です）
 mysql -h (RDS エンドポイント) -u simple_blog_user -p
 
 create database simple_blog;
