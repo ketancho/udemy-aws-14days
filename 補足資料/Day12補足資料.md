@@ -15,6 +15,8 @@ kill (PID)
 # Day12-6
 ※ソースコードは Day12 フォルダ以下に格納しています
 ```
+aws configure
+
 python3 send_message.py 
 
 cp udemy-aws-14days/Day12/recieve_message.py .
