@@ -35,7 +35,7 @@ sudo vim /var/www/html/index.php
 ```
 ## RDS インスタンスに接続後
 use simple_blog;
-delete from posts where id = 3;
+delete from posts where id = 4;
 
 ## EC2 からの接続先をリストア後の RDS エンドポイントに変更する
 sudo vim /var/www/html/index.php 
