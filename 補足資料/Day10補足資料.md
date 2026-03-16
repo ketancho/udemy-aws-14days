@@ -7,7 +7,7 @@ aws ec2 stop-instances --instance-ids i-xxxxxx
 aws ec2 create-image --instance-id i-xxxxxx --name Web-AMI-from-cli
 aws ec2 start-instances --instance-ids i-xxxxxx
 
-aws s3 mb udemy-aws-14days-sandbox-batch(バケット名は変更が必要です)
+aws s3 mb udemy-aws-14days-batch(バケット名は変更が必要です)
 
 ```
 
