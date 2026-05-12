@@ -47,7 +47,8 @@ ServerName udemy-aws-14days-web-1a
 ## 文法があっているかを確認
 httpd -t
 
-sudo systemctl reload httpd
+sudo systemctl stop httpd
+sudo systemctl start httpd
 
 sudo dnf install -y git
 git clone https://github.com/ketancho/udemy-aws-14days.git
