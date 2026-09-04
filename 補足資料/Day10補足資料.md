@@ -36,11 +36,18 @@ ssh -i udemy-aws-14days.pem ec2-user@(Batch-1cインスタンスの Public IP �
 
 python3 -V
 
+# <旧手順: 動画ではこちらのコマンドを実行していますが、boto3 の最新版を利用するには Python 3.10以上が必要になったため、後述の新手順の方をご利用ください>
 curl -O https://bootstrap.pypa.io/get-pip.py
 python3 get-pip.py --user
 pip install boto3
 pip install mysql-connector-python
+
+# <新手順>
+sudo dnf install python3.14 python3.14-pip -y
+python3.14 -m pip install boto3
+python3.14 -m pip install mysql-connector-python
 ```
+※ 以降のハンズオン動画において、`python3` となっている部分は、全て `python3.14` に置き換えて実行してください。（補足資料におけるコマンドは全て `python3.14` に修正しています。）
 
 # Day10-4
 ※ソースコードは Day10 フォルダ以下に格納しています
@@ -48,14 +55,14 @@ pip install mysql-connector-python
 vim get_posts_from_s3.py
 
 ## ファイル DL
-python3 get_posts_from_s3.py
+python3.14 get_posts_from_s3.py
 ## -> 権限が無いと言われる
 
 aws configure
 ## -> Access Key, Secret Access Key, ap-northeast-1, json
 
 ## 再度 ファイル DL
-python3 get_posts_from_s3.py
+python3.14 get_posts_from_s3.py
 ## -> post.csv が DL できる
 
 ## （参考）以下、用意してあるコードの DL 手順
@@ -67,6 +74,6 @@ cp udemy-aws-14days/Day10/src/update_posts_using_csv.py .
 vim update_posts_using_csv.py
 
 ## バッチ実行
-python3 update_posts_using_csv.py
+python3.14 update_posts_using_csv.py
 
 ```

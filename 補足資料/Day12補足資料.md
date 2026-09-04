@@ -17,11 +17,11 @@ kill (PID)
 ```
 aws configure
 
-python3 send_message.py 
+python3.14 send_message.py 
 
 cp udemy-aws-14days/Day12/recieve_message.py .
 vim recieve_message.py
-python3 recieve_message.py 
+python3.14 recieve_message.py 
 ```
 
 # Day12-8
